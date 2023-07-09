@@ -59,9 +59,9 @@ app.post("/failure", function(request, response){
     response.redirect("/")
 });
 
-app.listen(PORT, function(){
-    const PORT = process.env.PORT || 3000;
-    console.log("app is running on PORT")
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("app is running on channel")
 })
 //api key
 //abf49d8b43f03827bc487cd583cc2129-us21
