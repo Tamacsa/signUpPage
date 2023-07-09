@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.get("/", function(request, response){
-    response.sendFile(__dirname + "/signup.html");
+    response.sendFile(__dirname + "/index.html");
 
     });
 
