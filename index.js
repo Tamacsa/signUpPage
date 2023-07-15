@@ -3,6 +3,8 @@ const app = express();
 const bodyParser= require("body-parser");
 const https= require("https");
 
+require('dotenv').config()
+
 
 app.use(express.static(__dirname + "/public"))
 var favicon = require('serve-favicon');
@@ -37,7 +39,7 @@ app.post("/", function(request, response){
     const url = "https://us21.api.mailchimp.com/3.0/lists/e120c62901";
     const options = {
         method: "POST",
-        auth: "tamacsa1998:abf49d8b43f03827bc487cd583cc2129-us21"
+        auth: "tamacsa1998:process.env.KEY"
     }
 
    const req=  https.request(url, options, function(res){
